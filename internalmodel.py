@@ -101,7 +101,6 @@ weights = [[0, -3, 1],
 
 #elements in the main diagonal are set to zero, 
 #since each postsynaptic neuron cannot get a presynaptic signal from itself
-#the internal activity in each neuron is described in lines 68 and 71
 
 t_length = 100
 dt_size = 0.1
