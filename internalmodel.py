@@ -25,7 +25,7 @@ def f(x):
 
 # Function to perform the "talking" of the neurons
 
-def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, sigma=0, num=2, I = 0):
+def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, sigma=0, num=2, ext = 0):
     """
     Implementing dynamics described in Equation 1 (from the reference)
     
@@ -53,7 +53,7 @@ def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, s
         num: integer
             number of neurons in the system.
 
-        I: external input. We're setting this to 0 for now
+        ext: external input. We're setting this to 0 for now
     """
 
     values = np.zeros((t_size, num))
@@ -82,9 +82,9 @@ def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, s
             #values[t - 1]: row containing states of neurons in the previous time 
             
             #euler integration of equation 1:
-            values[t][n] = values[t - 1][n] * (1 - dt/tao) + (dt/tao)*function(dot + theta + I)
+            values[t][n] = values[t - 1][n] * (1 - dt/tao) + (dt/tao)*function(dot + theta + ext)
             #theta: a constant indicating bias
-            #I: external input, set to 0 for now
+            #ext: external input, set to 0 for now
                  
     return values
 
