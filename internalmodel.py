@@ -57,7 +57,7 @@ def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, s
     """
 
     values = np.zeros((t_size, num))
-    # column indicates neuron, row indicates time, with column index 0 being the initial t = 0
+    # column indicates neuron, row indicates time, with row index 0 being the initial t = 0
     # num = number of rows in this array
     # t_size = number of columns in this array
     
