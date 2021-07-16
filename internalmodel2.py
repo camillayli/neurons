@@ -66,8 +66,8 @@ def talking(function, weights, initials, t_size, dt, t_initial, theta, mean=0, s
         # t = row index
 
         dot = np.dot(values[t - 1], weights)
-        #dot product of vector containing previous states of neurons and
-        #matrix containing weights (column: postsynaptic neurons, row: presynaptic neurons)
+        #matrix product of vector containing previous states of neurons and
+        #the matrix containing weights (column: postsynaptic neurons, row: presynaptic neurons)
        
         #values[t - 1]: row containing states of neurons in the previous time      
         
